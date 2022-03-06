@@ -22,5 +22,17 @@ document.getElementById('add-btn').addEventListener('click', function () {
         const deleteButton = document.getElementsByClassName('delete-btn');
 
         const doneButton = document.getElementsByClassName('done-btn');
+
+        //for of
+        for (const button of deleteButton) {
+            button.addEventListener('click', function (e) {
+                e.target.parentNode.parentNode.style.display = 'none';
+            })
+        }
+        for (const button of doneButton) {
+            button.addEventListener('click', function (e) {
+                e.target.parentNode.parentNode.style.textDecoration = 'line-through'
+            })
+        }
     }
 })
