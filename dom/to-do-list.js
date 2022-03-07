@@ -1,5 +1,5 @@
 let count = 0;
-document.getElementById('add-btn').addEventListener('click', function () {
+document.getElementById('add-btn').addEventListener('click', function (e) {
     count++;
     const inputValue = document.getElementById('input-value').value;
 
@@ -35,4 +35,10 @@ document.getElementById('add-btn').addEventListener('click', function () {
             })
         }
     }
+    // close all button
+    const closeAllBtn = document.getElementById('close-all-btn');
+    closeAllBtn.addEventListener('click', function () {
+        document.getElementById('content-container').style.display = 'none';
+    })
+
 })
